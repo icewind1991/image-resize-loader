@@ -16,7 +16,7 @@ loaders: [
         test: /.*\.(png|jpg)(\?.+)?$/i,
         loaders: [
             'file',
-            'image-converter'
+            'image-resize'
         ]
     },
     ...
