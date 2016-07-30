@@ -1,0 +1,8 @@
+{
+  "name": "image-resize-loader",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "loader-utils": "^0.2.15",
+    "jimp": "^0.2.24"
+  }
+}
