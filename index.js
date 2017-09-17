@@ -13,6 +13,9 @@ module.exports = function (source) {
 	const sourcePath = this.resourcePath;
 
 	var ext = sourcePath.substr(sourcePath.length - 3);
+	if (!this.resourceQuery) {
+		return source;
+	}
 	const query = loaderUtils.parseQuery(this.resourceQuery);
 	var mime = MIMES[ext];
 
@@ -32,7 +35,7 @@ module.exports = function (source) {
 			return;
 		}
 
-		function resizeImage (width) {
+		function resizeImage(width) {
 			img
 				.resize(width, jimp.AUTO)
 				.getBuffer(mime, function (err, buf) {
